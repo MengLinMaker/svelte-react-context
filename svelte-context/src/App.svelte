@@ -20,7 +20,7 @@ import Parent from "./components/Parent.svelte"
     <ChildTwo/>
   </Parent>
 
-  <h3>Nested inner context wins</h3>
+  <h3>Closest context wins</h3>
   <Parent name="3. Nested">
     <Parent name="3.1. Nessie">
       <Child/>
