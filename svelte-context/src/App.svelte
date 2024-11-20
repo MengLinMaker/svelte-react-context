@@ -5,7 +5,7 @@ import Parent from "./components/Parent.svelte"
 </script>
 
 <main>
-  <h2>Testing context</h2>
+  <h2>Svelte context</h2>
 
   <h3>Child in div in parent</h3>
   <Parent name="1. John">

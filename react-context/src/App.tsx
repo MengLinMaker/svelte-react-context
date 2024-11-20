@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h2>Testing context</h2>
+      <h2>React context</h2>
 
       <h3>Child in div in parent</h3>
       <Parent name='1. John'>
