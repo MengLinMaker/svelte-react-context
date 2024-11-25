@@ -3,15 +3,16 @@ import { getContext, setContext } from 'svelte'
 
 /**
  * Propagates state type using generics to `getContext` - which return `unkown` by default
- * @param contextKey 
  * @returns `setContext` and `getContext` packaged together for bettwe DX
  */
-export function createContext<T>(contextKey: string) {
+export function createSvelteContext<T>() {
+  const contextKey = `${Math.random()}${Date.now()}`
+
   return {
     setContext: (value: T) => {
       const contextValue = $state(value)
       return setContext(contextKey, contextValue)
     },
-    getContext: () => getContext<T>(contextKey)
+    getContext: () => getContext<T>(contextKey),
   }
 }

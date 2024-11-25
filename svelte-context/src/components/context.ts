@@ -1,9 +1,8 @@
 // File does not contain `$state`, hence normal `.ts` file can be used
-import { createContext } from "./utils.svelte"
+import { createSvelteContext } from "./utils"
 
-/**
- * Define your context with state type
- */
-export const context = createContext<{
+
+export type Context = {
   name: string
-}>('tanstack-svelte-router')
+}
+export const context = createSvelteContext<Context>()

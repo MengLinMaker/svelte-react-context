@@ -1,9 +1,9 @@
 <script lang="ts">
   import type { Component } from 'svelte'
-  import { context } from './context'
+  import { context, type Context } from './context'
 
-  const props = $props<{ name: string, children: Component}>()
-  context.setContext({ name: props.name})
+  const props = $props<{ value: Context, children: Component}>()
+  context.setContext(props.value)
 </script>
 
 {@render props.children()}
